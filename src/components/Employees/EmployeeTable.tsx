@@ -37,23 +37,25 @@ export const EmployeeTable: React.FC<EmployeeTableProps> = ({ employees, onEdit,
                 </div>
                 <div className="flex gap-3">
                     <select
-                        className="px-4 py-2 bg-gray-50 border border-gray-200 rounded-xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        className="px-4 py-2 bg-gray-50 border border-gray-200 rounded-xl text-sm font-medium text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer"
                         value={filter.gender}
                         onChange={(e) => setFilter({ ...filter, gender: e.target.value })}
+                        style={{ colorScheme: 'light' }}
                     >
-                        <option value="All">All Genders</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Other">Other</option>
+                        <option value="All" className="text-gray-900 bg-white">All Genders</option>
+                        <option value="Male" className="text-gray-900 bg-white">Male</option>
+                        <option value="Female" className="text-gray-900 bg-white">Female</option>
+                        <option value="Other" className="text-gray-900 bg-white">Other</option>
                     </select>
                     <select
-                        className="px-4 py-2 bg-gray-50 border border-gray-200 rounded-xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        className="px-4 py-2 bg-gray-50 border border-gray-200 rounded-xl text-sm font-medium text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer"
                         value={filter.status}
                         onChange={(e) => setFilter({ ...filter, status: e.target.value })}
+                        style={{ colorScheme: 'light' }}
                     >
-                        <option value="All">All Status</option>
-                        <option value="Active">Active</option>
-                        <option value="Inactive">Inactive</option>
+                        <option value="All" className="text-gray-900 bg-white">All Status</option>
+                        <option value="Active" className="text-gray-900 bg-white">Active</option>
+                        <option value="Inactive" className="text-gray-900 bg-white">Inactive</option>
                     </select>
                 </div>
             </div>
