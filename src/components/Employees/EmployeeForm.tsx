@@ -130,13 +130,14 @@ export const EmployeeForm: React.FC<EmployeeFormProps> = ({ initialData, onSubmi
                     <select
                         value={formData.gender}
                         onChange={(e) => setFormData({ ...formData, gender: e.target.value })}
-                        className={`w-full bg-white border text-gray-900 text-sm rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent block p-2.5 outline-none transition-all ${errors.gender ? 'border-red-500' : 'border-gray-200'
+                        className={`w-full bg-white border text-gray-900 text-sm rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent block p-2.5 outline-none transition-all appearance-none cursor-pointer ${errors.gender ? 'border-red-500' : 'border-gray-200'
                             }`}
+                        style={{ colorScheme: 'light' }}
                     >
-                        <option value="">Select Gender</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Other">Other</option>
+                        <option value="" className="text-gray-500 bg-white">Select Gender</option>
+                        <option value="Male" className="text-gray-900 bg-white">Male</option>
+                        <option value="Female" className="text-gray-900 bg-white">Female</option>
+                        <option value="Other" className="text-gray-900 bg-white">Other</option>
                     </select>
                     {errors.gender && <p className="mt-1.5 text-sm text-red-600 font-medium">{errors.gender}</p>}
                 </div>
@@ -156,12 +157,13 @@ export const EmployeeForm: React.FC<EmployeeFormProps> = ({ initialData, onSubmi
                 <select
                     value={formData.state}
                     onChange={(e) => setFormData({ ...formData, state: e.target.value })}
-                    className={`w-full bg-white border text-gray-900 text-sm rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent block p-2.5 outline-none transition-all ${errors.state ? 'border-red-500' : 'border-gray-200'
+                    className={`w-full bg-white border text-gray-900 text-sm rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent block p-2.5 outline-none transition-all appearance-none cursor-pointer ${errors.state ? 'border-red-500' : 'border-gray-200'
                         }`}
+                    style={{ colorScheme: 'light' }}
                 >
-                    <option value="">Select State</option>
+                    <option value="" className="text-gray-500 bg-white">Select State</option>
                     {states.map((s) => (
-                        <option key={s} value={s}>{s}</option>
+                        <option key={s} value={s} className="text-gray-900 bg-white">{s}</option>
                     ))}
                 </select>
                 {errors.state && <p className="mt-1.5 text-sm text-red-600 font-medium">{errors.state}</p>}
